@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "OCFWebServer.h"
+#import "SpotifyService.h"
 
 @interface ViewController ()
 
@@ -40,6 +41,10 @@
         [self.server runWithPort:8888];
         
     });
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    // Show spotify login controller
 }
 
 - (void)didReceiveMemoryWarning
