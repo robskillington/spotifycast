@@ -31,14 +31,18 @@
                                processBlock:^void(OCFWebServerRequest *request,
                                                   OCFWebServerResponseBlock respondWith) {
                                    
-                                   // Create your response and pass it to respondWith(...)
-                                   respondWith([OCFWebServerDataResponse responseWithHTML:@"Hello World"]);
+                                   NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                                        pathForResource:@"song"
+                                                                        ofType:@"mp3"]];
+                            
+                                   NSData *data = [NSData dataWithContentsOfURL:url];
                                    
+                                   respondWith([OCFWebServerDataResponse responseWithData:data contentType:@"audio/mpeg"]);
                                }];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        // Run the server on port 8080
-        [self.server runWithPort:8888];
+        // Run the server on port 9999
+        [self.server runWithPort:9999];
         
     });
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01622B7E17B0B0D100C08129 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01622B7D17B0B0D100C08129 /* song.mp3 */; };
 		D406F55A17B0A11000E617E0 /* OCFWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55217B0A11000E617E0 /* OCFWebServer.m */; };
 		D406F55B17B0A11000E617E0 /* OCFWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55417B0A11000E617E0 /* OCFWebServerConnection.m */; };
 		D406F55C17B0A11000E617E0 /* OCFWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55717B0A11000E617E0 /* OCFWebServerRequest.m */; };
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01622B7D17B0B0D100C08129 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		D406F55117B0A11000E617E0 /* OCFWebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFWebServer.h; sourceTree = "<group>"; };
 		D406F55217B0A11000E617E0 /* OCFWebServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCFWebServer.m; sourceTree = "<group>"; };
 		D406F55317B0A11000E617E0 /* OCFWebServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFWebServerConnection.h; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		D4D3151E17B09FC700CC0EF6 /* Spotifycast */ = {
 			isa = PBXGroup;
 			children = (
+				01622B7D17B0B0D100C08129 /* song.mp3 */,
 				D4D3152717B09FC700CC0EF6 /* AppDelegate.h */,
 				D4D3152817B09FC700CC0EF6 /* AppDelegate.m */,
 				D4D3153017B09FC700CC0EF6 /* MainStoryboard_iPhone.storyboard */,
@@ -409,6 +412,7 @@
 				D4D3153217B09FC700CC0EF6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D4D3153517B09FC700CC0EF6 /* MainStoryboard_iPad.storyboard in Resources */,
 				D406F57B17B0A7D700E617E0 /* SPLoginResources.bundle in Resources */,
+				01622B7E17B0B0D100C08129 /* song.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
