@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "OCFWebServer.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) OCFWebServer *server;
 
 @end
 
@@ -17,7 +20,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    self.server = [OCFWebServer new];
+    
+    // Add a request handler for every possible GET request
+    
+    [self.server addDefaultHandlerForMethod:@"GET"
+                               requestClass:[OCFWebServerRequest class]
+                               processBlock:^void(OCFWebServerRequest *request,
+                                                  OCFWebServerResponseBlock respondWith) {
+                                   
+                                   // Create your response and pass it to respondWith(...)
+                                   respondWith([OCFWebServerDataResponse responseWithHTML:@"Hello World"]);
+                                   
+                               }];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        // Run the server on port 8080
+        [self.server runWithPort:8888];
+        
+    });
 }
 
 - (void)didReceiveMemoryWarning

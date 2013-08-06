@@ -11,6 +11,9 @@
 		D406F55B17B0A11000E617E0 /* OCFWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55417B0A11000E617E0 /* OCFWebServerConnection.m */; };
 		D406F55C17B0A11000E617E0 /* OCFWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55717B0A11000E617E0 /* OCFWebServerRequest.m */; };
 		D406F55D17B0A11000E617E0 /* OCFWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55917B0A11000E617E0 /* OCFWebServerResponse.m */; };
+		D406F55F17B0A1F600E617E0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406F55E17B0A1F600E617E0 /* CFNetwork.framework */; };
+		D406F56117B0A22500E617E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406F56017B0A22500E617E0 /* SystemConfiguration.framework */; };
+		D406F56317B0A22D00E617E0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406F56217B0A22D00E617E0 /* MobileCoreServices.framework */; };
 		D4D3151917B09FC700CC0EF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D3151817B09FC700CC0EF6 /* UIKit.framework */; };
 		D4D3151B17B09FC700CC0EF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D3151A17B09FC700CC0EF6 /* Foundation.framework */; };
 		D4D3151D17B09FC700CC0EF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D3151C17B09FC700CC0EF6 /* CoreGraphics.framework */; };
@@ -50,6 +53,9 @@
 		D406F55717B0A11000E617E0 /* OCFWebServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCFWebServerRequest.m; sourceTree = "<group>"; };
 		D406F55817B0A11000E617E0 /* OCFWebServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFWebServerResponse.h; sourceTree = "<group>"; };
 		D406F55917B0A11000E617E0 /* OCFWebServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCFWebServerResponse.m; sourceTree = "<group>"; };
+		D406F55E17B0A1F600E617E0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D406F56017B0A22500E617E0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D406F56217B0A22D00E617E0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D4D3151517B09FC700CC0EF6 /* Spotifycast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifycast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D3151817B09FC700CC0EF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4D3151A17B09FC700CC0EF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D406F56317B0A22D00E617E0 /* MobileCoreServices.framework in Frameworks */,
+				D406F56117B0A22500E617E0 /* SystemConfiguration.framework in Frameworks */,
+				D406F55F17B0A1F600E617E0 /* CFNetwork.framework in Frameworks */,
 				D4D3151917B09FC700CC0EF6 /* UIKit.framework in Frameworks */,
 				D4D3151B17B09FC700CC0EF6 /* Foundation.framework in Frameworks */,
 				D4D3151D17B09FC700CC0EF6 /* CoreGraphics.framework in Frameworks */,
@@ -127,6 +136,9 @@
 		D4D3150C17B09FC600CC0EF6 = {
 			isa = PBXGroup;
 			children = (
+				D406F56217B0A22D00E617E0 /* MobileCoreServices.framework */,
+				D406F56017B0A22500E617E0 /* SystemConfiguration.framework */,
+				D406F55E17B0A1F600E617E0 /* CFNetwork.framework */,
 				D406F54F17B0A10000E617E0 /* Libraries */,
 				D4D3151E17B09FC700CC0EF6 /* Spotifycast */,
 				D4D3154517B09FC700CC0EF6 /* SpotifycastTests */,
