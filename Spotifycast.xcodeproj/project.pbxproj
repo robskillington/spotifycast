@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D406F55A17B0A11000E617E0 /* OCFWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55217B0A11000E617E0 /* OCFWebServer.m */; };
+		D406F55B17B0A11000E617E0 /* OCFWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55417B0A11000E617E0 /* OCFWebServerConnection.m */; };
+		D406F55C17B0A11000E617E0 /* OCFWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55717B0A11000E617E0 /* OCFWebServerRequest.m */; };
+		D406F55D17B0A11000E617E0 /* OCFWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55917B0A11000E617E0 /* OCFWebServerResponse.m */; };
 		D4D3151917B09FC700CC0EF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D3151817B09FC700CC0EF6 /* UIKit.framework */; };
 		D4D3151B17B09FC700CC0EF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D3151A17B09FC700CC0EF6 /* Foundation.framework */; };
 		D4D3151D17B09FC700CC0EF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D3151C17B09FC700CC0EF6 /* CoreGraphics.framework */; };
@@ -37,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D406F55117B0A11000E617E0 /* OCFWebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFWebServer.h; sourceTree = "<group>"; };
+		D406F55217B0A11000E617E0 /* OCFWebServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCFWebServer.m; sourceTree = "<group>"; };
+		D406F55317B0A11000E617E0 /* OCFWebServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFWebServerConnection.h; sourceTree = "<group>"; };
+		D406F55417B0A11000E617E0 /* OCFWebServerConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCFWebServerConnection.m; sourceTree = "<group>"; };
+		D406F55517B0A11000E617E0 /* OCFWebServerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFWebServerPrivate.h; sourceTree = "<group>"; };
+		D406F55617B0A11000E617E0 /* OCFWebServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFWebServerRequest.h; sourceTree = "<group>"; };
+		D406F55717B0A11000E617E0 /* OCFWebServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCFWebServerRequest.m; sourceTree = "<group>"; };
+		D406F55817B0A11000E617E0 /* OCFWebServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFWebServerResponse.h; sourceTree = "<group>"; };
+		D406F55917B0A11000E617E0 /* OCFWebServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCFWebServerResponse.m; sourceTree = "<group>"; };
 		D4D3151517B09FC700CC0EF6 /* Spotifycast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifycast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D3151817B09FC700CC0EF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D4D3151A17B09FC700CC0EF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,9 +99,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D406F54F17B0A10000E617E0 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				D406F55017B0A11000E617E0 /* OCFWebServer */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		D406F55017B0A11000E617E0 /* OCFWebServer */ = {
+			isa = PBXGroup;
+			children = (
+				D406F55117B0A11000E617E0 /* OCFWebServer.h */,
+				D406F55217B0A11000E617E0 /* OCFWebServer.m */,
+				D406F55317B0A11000E617E0 /* OCFWebServerConnection.h */,
+				D406F55417B0A11000E617E0 /* OCFWebServerConnection.m */,
+				D406F55517B0A11000E617E0 /* OCFWebServerPrivate.h */,
+				D406F55617B0A11000E617E0 /* OCFWebServerRequest.h */,
+				D406F55717B0A11000E617E0 /* OCFWebServerRequest.m */,
+				D406F55817B0A11000E617E0 /* OCFWebServerResponse.h */,
+				D406F55917B0A11000E617E0 /* OCFWebServerResponse.m */,
+			);
+			name = OCFWebServer;
+			path = Libraries/OCFWebServer/OCFWebServer;
+			sourceTree = "<group>";
+		};
 		D4D3150C17B09FC600CC0EF6 = {
 			isa = PBXGroup;
 			children = (
+				D406F54F17B0A10000E617E0 /* Libraries */,
 				D4D3151E17B09FC700CC0EF6 /* Spotifycast */,
 				D4D3154517B09FC700CC0EF6 /* SpotifycastTests */,
 				D4D3151717B09FC700CC0EF6 /* Frameworks */,
@@ -277,6 +316,10 @@
 				D4D3152517B09FC700CC0EF6 /* main.m in Sources */,
 				D4D3152917B09FC700CC0EF6 /* AppDelegate.m in Sources */,
 				D4D3153817B09FC700CC0EF6 /* ViewController.m in Sources */,
+				D406F55A17B0A11000E617E0 /* OCFWebServer.m in Sources */,
+				D406F55B17B0A11000E617E0 /* OCFWebServerConnection.m in Sources */,
+				D406F55C17B0A11000E617E0 /* OCFWebServerRequest.m in Sources */,
+				D406F55D17B0A11000E617E0 /* OCFWebServerResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,3 @@
+[submodule "Libraries/OCFWebServer"]
+	path = Libraries/OCFWebServer
+	url = https://github.com/Objective-Cloud/OCFWebServer.git
