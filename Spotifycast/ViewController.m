@@ -26,19 +26,67 @@
     
     // Add a request handler for every possible GET request
     
-    [self.server addDefaultHandlerForMethod:@"GET"
-                               requestClass:[OCFWebServerRequest class]
-                               processBlock:^void(OCFWebServerRequest *request,
-                                                  OCFWebServerResponseBlock respondWith) {
-                                   
-                                   NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                                        pathForResource:@"song"
-                                                                        ofType:@"mp3"]];
+//    [self.server addDefaultHandlerForMethod:@"GET"
+//                               requestClass:[OCFWebServerRequest class]
+//                               processBlock:^void(OCFWebServerRequest *request,
+//                                                  OCFWebServerResponseBlock respondWith) {
+//                                   
+//                                   if (OCFWebServerRequest.url.) {
+//                                   
+//                                   NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+//                                                                        pathForResource:@"song"
+//                                                                        ofType:@"mp3"]];
+//                            
+//                                   NSData *data = [NSData dataWithContentsOfURL:url];
+//                                   
+//                                   respondWith([OCFWebServerDataResponse responseWithData:data contentType:@"audio/mpeg"]);
+//                                       
+//                                   } else if ([OCFWebServerRequest.url.path == '']){
+//                                    
+//                                   NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+//                                                                        pathForResource:@"index"
+//                                                                        ofType:@"html"]];
+//                                   
+//                                   NSData *html = [NSData dataWithContentsOfURL:url];
+//                                   
+//                                   
+//                                   respondWith([OCFWebServerDataResponse responseWithData:html contentType:@"text/html"]);
+//                                   }
+//                               }];
+    
+    [self.server addHandlerForMethod:@"GET"
+                           path:@"/"
+                   requestClass:[OCFWebServerRequest class]
+                   processBlock:^void(OCFWebServerRequest* request,
+                                      OCFWebServerResponseBlock respondWith) {
+                       
+                       NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                            pathForResource:@"index"
+                                                            ofType:@"html"]];
+                       
+                       NSData *html = [NSData dataWithContentsOfURL:url];
+                       
+                       
+                       respondWith([OCFWebServerDataResponse responseWithData:html contentType:@"text/html"]);
+                   }];
+    
+    [self.server addHandlerForMethod:@"GET"
+                                path:@"/audio"
+                        requestClass:[OCFWebServerRequest class]
+                        processBlock:^void(OCFWebServerRequest* request,
+                                           OCFWebServerResponseBlock respondWith) {
                             
-                                   NSData *data = [NSData dataWithContentsOfURL:url];
-                                   
-                                   respondWith([OCFWebServerDataResponse responseWithData:data contentType:@"audio/mpeg"]);
-                               }];
+                            NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                                 pathForResource:@"song"
+                                                                 ofType:@"mp3"]];
+                            
+                            NSData *data = [NSData dataWithContentsOfURL:url];
+                            
+                            
+                            respondWith([OCFWebServerDataResponse responseWithData:data contentType:@"audio/mpeg"]);
+                        }];
+
+    
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         // Run the server on port 9999

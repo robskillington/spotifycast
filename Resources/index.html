@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotifycast</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <script type='text/javascript'>
+    setInterval(function() {
+      $.ajax({ type: "GET",
+        url: "/audio",
+        async: false,
+        statusCode: {
+          200: function() {
+            console.log("server up");
+          },
+          0: function() {
+            console.log("server down");
+          }
+        }
+      });
+    });
+    </script>
+    <audio controls autoplay><source src="http://localhost:9999/audio" type="audio/mpeg"></audio>
+  </body>
+</html>

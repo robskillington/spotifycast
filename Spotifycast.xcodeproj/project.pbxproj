@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01622B7E17B0B0D100C08129 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 01622B7D17B0B0D100C08129 /* song.mp3 */; };
+		01ADE78317B0BD0900F7BA8E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 01ADE78217B0BD0900F7BA8E /* index.html */; };
 		D406F55A17B0A11000E617E0 /* OCFWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55217B0A11000E617E0 /* OCFWebServer.m */; };
 		D406F55B17B0A11000E617E0 /* OCFWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55417B0A11000E617E0 /* OCFWebServerConnection.m */; };
 		D406F55C17B0A11000E617E0 /* OCFWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D406F55717B0A11000E617E0 /* OCFWebServerRequest.m */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		01622B7D17B0B0D100C08129 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
+		01ADE78217B0BD0900F7BA8E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = Resources/index.html; sourceTree = "<group>"; };
 		D406F55117B0A11000E617E0 /* OCFWebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFWebServer.h; sourceTree = "<group>"; };
 		D406F55217B0A11000E617E0 /* OCFWebServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCFWebServer.m; sourceTree = "<group>"; };
 		D406F55317B0A11000E617E0 /* OCFWebServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFWebServerConnection.h; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		D406F57917B0A7BB00E617E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				01ADE78217B0BD0900F7BA8E /* index.html */,
 				D406F57A17B0A7D700E617E0 /* SPLoginResources.bundle */,
 			);
 			name = Resources;
@@ -413,6 +416,7 @@
 				D4D3153517B09FC700CC0EF6 /* MainStoryboard_iPad.storyboard in Resources */,
 				D406F57B17B0A7D700E617E0 /* SPLoginResources.bundle in Resources */,
 				01622B7E17B0B0D100C08129 /* song.mp3 in Resources */,
+				01ADE78317B0BD0900F7BA8E /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
